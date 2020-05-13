@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+
+  <body ng-app="myApp" ng-controller="myCtrl">
+    <h1>{{title}}</h1>
+    <div><span>confirmed :</span>{{all_data.confirmed.value}}</div>
+    <div><span>recovered: </span>{{all_data.recovered.value}}</div>
+    <div><span>deaths :</span>{{all_data.deaths.value}}</div>
+    
+    <hr>
+    <input type="text" ng-model="c" ng-change="get_c_data()">
+<div ng-if="c_data">
+    
+        <h1>{{c}} status</h1>
+    <div><span>confirmed :</span>{{c_data.confirmed.value}}</div>
+    <div><span>recovered: </span>{{c_data.recovered.value}}</div>
+    <div><span>deaths :</span>{{c_data.deaths.value}}</div>
+    </div>
+  </body>
+
+</html>
