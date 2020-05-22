@@ -24,6 +24,7 @@
     margin: 5px;
         border-radius: 4px;
         width: 100%;
+        color: white;
 }
       .grid div:first-child {
     background: #FFC107;
@@ -33,6 +34,7 @@
 }
       .grid div:nth-child(2) {
     background: #4CAF50;
+        
 }
       input {
     border: 1px solid #0c5248;
@@ -43,6 +45,10 @@
             max-width: 100%;
     margin: auto;
     width: 275px;
+}
+      .grid span {
+    display: block;
+    text-transform: uppercase;
 }
     </style>
   </head>
@@ -61,9 +67,9 @@
     
         <h1>{{c}} status</h1>
       <div class="grid">
-    <div><span>confirmed :</span>{{c_data.confirmed.value}}</div>
-    <div><span>recovered: </span>{{c_data.recovered.value}}</div>
-    <div><span>deaths :</span>{{c_data.deaths.value}}</div>
+    <div><span>confirmed </span>{{c_data.confirmed.value}}</div>
+    <div><span>recovered </span>{{c_data.recovered.value}}</div>
+    <div><span>deaths </span>{{c_data.deaths.value}}</div>
   </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
