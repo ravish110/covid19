@@ -3,23 +3,60 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19</title>
+    <style>
+      body {
+       text-align: center;
+        font-family: cursive;
+    background: #6eaba254;
+        color: #0c5248;
+      }
+      .grid {
+    display: flex;
+}
+      .grid div {
+    border: 1px solid #0c5248;
+    padding: 10px;
+    margin: 5px;
+        border-radius: 4px;
+}
+      .grid div:first-child {
+    background: #FFC107;
+}
+      .grid div:last-child {
+    background: #F44336;
+}
+      .grid div:nth-child(2) {
+    background: #4CAF50;
+}
+      input {
+    border: 1px solid #0c5248;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+    </style>
   </head>
 
   <body ng-app="myApp" ng-controller="myCtrl">
     <h1>{{title}}</h1>
-    <div><span>confirmed :</span>{{all_data.confirmed.value}}</div>
-    <div><span>recovered: </span>{{all_data.recovered.value}}</div>
-    <div><span>deaths :</span>{{all_data.deaths.value}}</div>
+    <div class="grid">
+      <div><span>confirmed </span>{{all_data.confirmed.value}}</div>
+      <div><span>recovered </span>{{all_data.recovered.value}}</div>
+      <div><span>deaths </span>{{all_data.deaths.value}}</div>
+    </div>
     
     <hr>
-    <input type="text" ng-model="c" ng-change="get_c_data()">
+    <input type="text" ng-model="c" ng-change="get_c_data()" placeholder="enter country name...">
 <div ng-if="c_data">
     
         <h1>{{c}} status</h1>
+      <div class="grid">
     <div><span>confirmed :</span>{{c_data.confirmed.value}}</div>
     <div><span>recovered: </span>{{c_data.recovered.value}}</div>
     <div><span>deaths :</span>{{c_data.deaths.value}}</div>
+  </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <script src="app.js"></script>
